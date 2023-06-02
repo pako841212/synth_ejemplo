@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  tesis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pacoCOLSON/synth_ejemplo:latest
+    command: bash
+    volumes:
+      - $PWD:/workdir
