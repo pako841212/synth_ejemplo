@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: pacoCOLSON/synth_ejemplo:latest
+    image: pacocolson/synth_ejemplo:latest
     command: bash
     volumes:
       - $PWD:/workdir
