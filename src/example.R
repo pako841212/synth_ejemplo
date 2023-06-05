@@ -1,7 +1,5 @@
 # Ejemplo sacado de https://rpubs.com/danilofreire/synth
 
-
-install.packages("synth", repos = "http://cran.us.r-project.org")
 install.packages("gsynth", repos = "http://cran.us.r-project.org")
 
 #La prochaine librairie permet la mise en place de la methode de control synthètique
