@@ -2,7 +2,7 @@
 
 #La prochaine librairie permet la mise en place de la methode de control synthètique
 
-library("synth")
+library("Synth")
 library("gsynth")
 
 #Maintenant les paquets sont près pour être ustilisés et simuler
