@@ -47,7 +47,7 @@ synth.out <- synth(dataprep.out)
 #Obtinir grille des résultats
 print(synth.tables   <- synth.tab(
         dataprep.res = dataprep.out,
-        synth.res    = synth.out)
+        synth.res    = synth.out))
 #Plot:
 path.plot(synth.res    = synth.out,
           dataprep.res = dataprep.out,
