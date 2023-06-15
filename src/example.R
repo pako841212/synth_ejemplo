@@ -27,7 +27,7 @@ df$Y <- ifelse(df$state == "A" & df$year >= 15, df$Y + 20, df$Y)
 str(df)
 head(df)
 #Maintenant on peut estimer les models, d'abord nous allons utiliser Synth. En suite, on peut observer les poids des variables indépendants(v.weights) et des groupes de control (w.weights)
-ataprep.out <-
+dataprep.out <-
         dataprep(df,
                  predictors = c("X1", "X2"),
                  dependent     = "Y",
@@ -47,7 +47,7 @@ synth.out <- synth(dataprep.out)
 #Obtinir grille des résultats
 print(synth.tables   <- synth.tab(
         dataprep.res = dataprep.out,
-        synth.res    = synth.out)
+        synth.res    = synth.out))
 #Plot:
 path.plot(synth.res    = synth.out,
           dataprep.res = dataprep.out,

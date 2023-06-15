@@ -8,3 +8,26 @@ services:
     command: bash
     volumes:
       - $PWD:/workdir
+
+  rstudio_synth:
+    build:
+      context: .
+      dockerfile: Dockerfile.rstudio
+    container_name: cont-rstudio
+    restart: always
+    volumes:
+      - type: volume
+        source: rstudio_synth
+        target: $PWD
+      - type: bind
+        source: $PWD
+        target: /home/rstudio
+    networks: 
+      - default
+    environment:
+      - PASSWORD=rstudio
+    ports:
+      - 5050:8787
+
+volumes:
+  rstudio_synth:
